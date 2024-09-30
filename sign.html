@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="./css/all.min.css">
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <title>signup</title>
+</head>
+<body>
+    
+    <span class="d-none" id="username"></span>
+
+    <div class="container my-5 text-center">
+        <div class="group m-auto w-75 p-5">
+            <h1>Smart Login System</h1>
+
+            <input id="signupName" class="form-control my-3" oninput="validate(signupName,nameRegex)"  placeholder="Enter your name" type="text">
+             <p class="error d-none">* Name must be at least 3 characters long and contain only letters, numbers, or underscores.
+             </p>
+            <input id="signupEmail" class="form-control my-3"  oninput="validate(signupEmail,emailRegex)"  placeholder="Enter your email" type="email">
+             <p  class="error d-none">* Please enter a valid email address (e.g., example@example.com).</p>
+            <input id="signupPassword" class="form-control my-3" oninput="validate(signupPassword,passwordRegex)"  placeholder="Enter  password" type="password">
+            <p  class="error d-none">* Password must be at least 8 characters long, and include at least one uppercase letter, one lowercase letter, and one digit.</p>
+            <p id="exist"></p>
+            <button onclick=" signUp()" class="btn btn-outline-info w-100 my-3">Sign Up</button>
+            <p class="text-white">You have an account? <a class='text-white' href='index.html'>Login</a></p>
+
+        </div>
+    </div>
+
+
+
+
+
+
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>
